@@ -24,6 +24,24 @@
 	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #000; /* Change this to your desired color */
+            text-decoration: none;
+            font-size: 20px; /* Adjust size as needed */
+        }
+        .social-icons a:hover {
+            color: #0077b5; /* Change color on hover for LinkedIn */
+        }
+        .social-icons a[href*="github"]:hover {
+            color: #333; /* Change color on hover for GitHub */
+        }
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -551,20 +569,32 @@
 		<!-- ==========================
         FOOTER SECTION
         =========================== -->
-        <footer>
-          <div class="container">
+      <footer>
+        <div class="container">
             <div class="row">
-              <div class="col-md-12 text-center">
-                <p>All Rights Reserved. &copy; 2015 <a href="http://www.themewagon.com">ThemeWagon</a>
-              </div>
+                <div class="col-md-12 text-center">
+                    <p>All Rights Reserved. &copy; <span id="year"></span> <a href="http://www.themewagon.com">ThemeWagon</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/amrahmed95" target="_blank">
+                            <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+                        </a>
+                        <a href="https://github.com/amrahmed95" target="_blank">
+                            <i class="fab fa-github"></i> <!-- GitHub Icon -->
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </footer>
+        </div>
+    </footer>
 		<!-- ==========================
         FOOTER SECTION END
         =========================== -->		
 		
-		
+    <script>
+      // Get the current year and set it in the footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- SmoothScroll -->           
