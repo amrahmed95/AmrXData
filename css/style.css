@@ -455,7 +455,7 @@ table {
 .hero {
 	background: url('../img/header-bg.jpg') right bottom no-repeat;
 	background-size: auto;
-	padding:110px 0 100px 0;
+	padding:200px 0 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
 }
@@ -536,23 +536,34 @@ table {
 	}
 }
 .scrollto {
-	padding: 150px 0px 0px 0px;
-	display:block;
-	color:#FFF;
-	text-decoration:none;
-	width:200px;
-	margin:0 auto;
-	border-bottom: none;
+    padding: 50px 0; /* Adjusted padding for vertical space */
+    display: block;
+    color: #FFF; /* Text color */
+    text-decoration: none;
+    width: 150px; /* Button width */
+	height: 150px; /* Button Height */
+    margin: 100px -200px auto -100px; /* Center the button */
+    background-color: #913333; /* Button background color */
+    border-radius: 20px; /* Rounded corners */
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-weight: bold; /* Bold text for emphasis */
 }
+
+.scrollto:hover {
+    background-color: darkred; /* Darker color on hover */
+}
+
 .scrollto--arrow {
-	padding:10px;
+    padding: 10px; /* Space for arrow */
 }
+
 .scrollto--arrow img {
-	animation:arrowbounce 1s alternate infinite;
-	-moz-animation:arrowbounce 1s alternate infinite;
-	/* Firefox */-webkit-animation:arrowbounce 1s alternate infinite;
-	/* Safari and Chrome */-o-animation: arrowbounce 1s alternate infinite;
-	/* Opera */
+    animation: arrowbounce 1s alternate infinite; /* Bounce animation */
+    width: 15px; /* Adjusted arrow size */
+    margin-top: 5px; /* Space above the arrow */
+}
+
 }
 /* ==========================================================================Intro========================================================================== */
 .intro p {
