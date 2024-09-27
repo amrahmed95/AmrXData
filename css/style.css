@@ -454,7 +454,7 @@ table {
 /* ==========================================================================Hero========================================================================== */
 .hero {
 	background: url('../img/header-bg.jpg') right bottom no-repeat;
-	background-size: contain;
+	background-size: auto;
 	padding:110px 0 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
@@ -723,6 +723,24 @@ i.respons {
 	height:300px;
 	width:100%;
 }
+
+.img-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Maintain 4:3 aspect ratio */
+    position: relative;
+    overflow: hidden; /* Ensure no part of the image overflows */
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image is contained properly */
+}
+
 img.grayscale {
 	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 	/* Firefox 3.5+,IE10 */ filter:gray;
